@@ -24,8 +24,8 @@ namespace EFcoreConcurrency
             builder.Property(t => t.Id).UseIdentityColumn(1, 1);
 
             //fluent API配置
-            //builder.Property(x => x.Version).IsRowVersion();
             //builder.Property(t => t.Quantity).IsConcurrencyToken();
+            builder.Property(x => x.Version).IsRowVersion();
         }
     }
 }
